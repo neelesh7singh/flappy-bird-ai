@@ -26,7 +26,7 @@ function setup() {
   }
   pipes.push(new Pipe());
   count = 1;
-  slider = createSlider(1, 100);
+  slider = createSlider(1, 50);
   highScoreSpan = select('#hs');
   allTimeHighScoreSpan = select('#ahs');
   generation = select('#gen');
