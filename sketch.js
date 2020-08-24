@@ -30,6 +30,7 @@ function setup() {
   highScoreSpan = select('#hs');
   allTimeHighScoreSpan = select('#ahs');
   generation = select('#gen');
+  alive = select('#alive');
 }
 
 function draw() {
@@ -93,6 +94,7 @@ function draw() {
   highScoreSpan.html(score);
   allTimeHighScoreSpan.html(highScore);
   generation.html(gen);
+  alive.html(birds.length + "/ 1000");
   //   pipes[i].show();
 }
 
