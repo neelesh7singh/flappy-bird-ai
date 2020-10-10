@@ -123,9 +123,14 @@ class NeuralNetwork {
   }
 
   mutate(rate) {
+    let count = 0;
     function mut(x) {
       if (Math.random() < rate) {
+        count++;
+        // console.log(rate);
         // console.log('mutate');
+        // if (Math.random() > 0.5) return x + 0.07;
+        // else return x - 0.07;
         return x + randomGaussian(0, 0.1);
       } else {
         return x;
@@ -140,6 +145,8 @@ class NeuralNetwork {
     for (let i = 0; i < this.hidden_layers; i++) {
       this.biase_h[i].map(mut);
     }
+
+    return count !== 0;
   }
 }
 

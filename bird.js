@@ -24,7 +24,7 @@ class Bird {
     pop();
   }
   update() {
-    this.score++;
+    this.score += 100;
     this.velocity += this.gravity;
     this.y += this.velocity;
     if (this.y < 0) {

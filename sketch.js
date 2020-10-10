@@ -1,4 +1,4 @@
-const TOTAL = 1000;
+const TOTAL = 500;
 let birds = [];
 let deadBirds = [];
 let birdImg;
@@ -67,6 +67,10 @@ function draw() {
         deadBirds.push(birds.splice(j, 1)[0]);
         continue;
       }
+      if (birds[j].y <= 0) {
+        deadBirds.push(birds.splice(j, 1)[0]);
+        continue;
+      }
       if (score < birds[j].score2) {
         score = birds[j].score2;
       }
@@ -94,7 +98,7 @@ function draw() {
   highScoreSpan.html(score);
   allTimeHighScoreSpan.html(highScore);
   generation.html(gen);
-  alive.html(birds.length + "/ 1000");
+  alive.html(birds.length + `/ ${TOTAL}`);
   //   pipes[i].show();
 }
 
